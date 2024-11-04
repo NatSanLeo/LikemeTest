@@ -22,7 +22,7 @@ Ejecuta las pruebas: Asegúrate de haber ejecutado  para generar los resultados 
 
 ## 💡 Comandos Importantes
 
-Aquí tienes algunos comandos clave para gestionar el proyecto:
+Comandos clave para gestionar el proyecto:
 
 - `./gradlew allureReport`  — Genera el reporte de Allure. 📈
 - `./gradlew allureServe`   — Abre el reporte en tu navegador. 🌐
