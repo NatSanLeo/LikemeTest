@@ -6,11 +6,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Browser {
+public class BrowserMobile {
     WebDriver driver;
 
 
-    public Browser(WebDriver _driver) {
+    public BrowserMobile(WebDriver _driver) {
         driver = _driver;
     }
 

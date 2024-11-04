@@ -16,6 +16,7 @@ public class AcctionsAboutPage {
         driver.findElement(By.xpath(xpath)).click();
 
     }
+
     public void clickToID(String id) {
         driver.findElement(By.id(id));
 
@@ -25,6 +26,7 @@ public class AcctionsAboutPage {
         driver.findElement(By.xpath(xpath)).sendKeys(text);
 
     }
+
     public void escribirIntoID(String text, String id) {
         driver.findElement(By.id(id)).sendKeys(text);
     }
@@ -37,9 +39,6 @@ public class AcctionsAboutPage {
         }
     }
 
-    public static WebDriver getDriver() {
-        return driver;
-    }
 
     public void setDriver(WebDriver _driver) {
         this.driver = _driver;

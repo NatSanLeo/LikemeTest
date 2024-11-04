@@ -1,6 +1,6 @@
 package stepsdefinitions;
 
-import drivers.navegador.Browser;
+import drivers.navegador.BrowserDesktop;
 import interactions.AcctionsAboutPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,16 +12,16 @@ import io.qameta.allure.Step;
 import static userInterfaces.ElementsPage.*;
 import static utilidades.ConstansPage.*;
 
-public class Inicio extends AcctionsAboutPage {
+public class StartVerifyPageDesktop extends AcctionsAboutPage {
     WebDriver driver;
 
-    public Inicio() {
+    public StartVerifyPageDesktop() {
         super(null);
     }
 
     @BeforeEach
     public void abrirPagina() {
-        Browser BR = new Browser(driver);
+        BrowserDesktop BR = new BrowserDesktop(driver);
         driver = BR.openBrowser(String.valueOf(RESPOSIVE_DESKTOP));
         setDriver(driver);
         clickToXpath(CLOSE_MODAL.getPath());
@@ -42,7 +42,7 @@ public class Inicio extends AcctionsAboutPage {
     @Test
     @Tag("Regresion")
     public void chooseBrand() {
-        clickToXpath(SELECT_BRAND.getPath());
+        clickToXpath(SELECT_BRAND_PCK.getPath());
         esperar();
 
     }
@@ -51,7 +51,7 @@ public class Inicio extends AcctionsAboutPage {
     @Test
     @Tag("Regresion")
     public void chooseGender() {
-        clickToXpath(SELECT_BRAND.getPath());
+        clickToXpath(SELECT_BRAND_PCK.getPath());
         clickToXpath(SELECT_MUJER.getPath());
         esperar();
 
@@ -61,7 +61,7 @@ public class Inicio extends AcctionsAboutPage {
     @Test
     @Tag("Regresion")
     public void chooseSize() {
-        clickToXpath(SELECT_BRAND.getPath());
+        clickToXpath(SELECT_BRAND_PCK.getPath());
         clickToXpath(OPEN_SELECT_SIZE.getPath());
         clickToXpath(SELECT_SIZE_S.getPath());
         esperar();
@@ -72,7 +72,7 @@ public class Inicio extends AcctionsAboutPage {
     @Test
     @Tag("Regresion")
     public void datailsOfProduct() {
-        clickToXpath(SELECT_BRAND.getPath());
+        clickToXpath(SELECT_BRAND_PCK.getPath());
         clickToXpath(SELECT_PRODUCT.getPath());
         clickToXpath(SELECT_SIZE_INTO_PRODUCT.getPath());
         clickToXpath(ADD_CARD_BUTTON.getPath());
